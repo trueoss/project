@@ -21,9 +21,9 @@ let personalMovieDB = {
 };
 let lastFilm, rate;
 for(let i = 0; i < 2; i ++){
-let lastFilm = prompt("What was the last movie you watched?", "");
-let rate = prompt("how do you rate him?", "");
-while(lastFilm == '' || rate ==''){
+lastFilm = prompt("What was the last movie you watched?", "");
+rate = prompt("how do you rate him?", "");
+while(lastFilm == '' || rate =='' || lastFilm.length > 50 || lastFilm == null || rate == null){
     lastFilm = prompt("What was the last movie you watched?", "");
     rate = prompt("how do you rate him?", "");
 }personalMovieDB.movies[lastFilm] = rate;
